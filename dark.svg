@@ -58,7 +58,7 @@
   <!-- Outer Border -->
   <rect x="16.5" y="16.5" width="1147" height="577" rx="21.5" fill="none" stroke="url(#accent)" stroke-opacity="0.55" stroke-width="1"/>
 
-  <!-- Header -->
+  <!-- Header Navigation -->
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="10.5" fill="#94A3B8">
     <text x="48" y="52" fill="#F8FAFC" font-weight="700">◆ anto.dev</text>
     <text x="760" y="52">Code</text>
@@ -84,49 +84,53 @@
     <text x="76" y="20" font-family="ui-monospace,monospace" font-size="10.5" fill="#94A3B8">anto@profile:~ — VISUAL.MAP</text>
     <text x="360" y="20" font-family="ui-monospace,monospace" font-size="9.5" fill="#22D3EE" letter-spacing="1">● SIGNAL</text>
 
-    <text x="20" y="56" font-family="ui-monospace,monospace" font-size="10" fill="#7C3AED" letter-spacing="2.5">[ PROFILE / ENGINEERING ]</text>
-
-    <!-- ASCII Portrait -->
-    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="9" fill="#E2E8F0" text-anchor="middle" letter-spacing="0.5">
-      <g transform="translate(216,210)">
-        <text y="-120">.·:+**##%%%%##**+:·.</text>
-        <text y="-108">.+*#%%@@@@@@@@@@@@@@%%#*+.</text>
-        <text y="-96">:#%@@@@@@@@@@@@@@@@@@@@@@@%#:</text>
-        <text y="-84">*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*</text>
-        <text y="-72">#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#</text>
-        <text y="-60">%@@@@@%#**++::....::++**#%@@@@@@@%</text>
-        <text y="-48">%@@@%+:                  :+%@@@@@@%</text>
-        <text y="-36">#@@%:    ·:+**#%%#**+:·    :%@@@@@#</text>
-        <text y="-24">*%@+   .*%@@@@@@@@@@@@%*.   +@@@@%*</text>
-        <text y="-12"> *@·   #@%+:·      ·:+%@#   ·@@@@*</text>
-        <text y="0">  *   #@·   ##      ##   ·@#   @@*</text>
-        <text y="12">      %%    ··      ··    %%   %%</text>
-        <text y="24">      *@·      ·::·      ·@*   @*</text>
-        <text y="36">       #@·    *####*    ·@#   #*</text>
-        <text y="48">        *@%+:·    ·:+%@*    %*</text>
-        <text y="60">         ·+#%@@@@@@%#+·    %+</text>
-        <text y="72">            ·:++++:·      *#</text>
-        <text y="84">         .+#%%%@@@@%%#+.  ##</text>
-        <text y="96">       :#@@@@@@@@@@@@@@%* ##</text>
-        <text y="108">     *%@@@@@@@@@@@@@@@@@@##</text>
-        <text y="120">   #@@@@@@@@@@@@@@@@@@@@@@%</text>
-        <text y="132">  %@@@@@@@@@@@@@@@@@@@@@@@@%</text>
-        <text y="144"> %@@@@@@@@%%####%%%@@@@@@@@@%</text>
-        <text y="156">+@@@@@%*+:·        ·:+*%@@@@@+</text>
+    <!-- Geometric Sphere ASCII (Reference Image) -->
+    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#38BDF8" text-anchor="middle" xml:space="preserve">
+      <g transform="translate(216,80)">
+        <text y="0">-=*#*+   ==++*#*=-</text>
+        <text y="9">.=+*+- . : : . -+*+=.</text>
+        <text y="18">.=+*- .    :    . -*+=.</text>
+        <text y="27">.+*=  :     +*##*+   :  =*+.</text>
+        <text y="36">=*-.   :.-  +*#%%#*+  - .  .-*=</text>
+        <text y="45">:   : --   +*#%@@%#*+      =*:</text>
+        <text y="54">.=*   - -:   *#%@@%#*  :  -  :  *=.</text>
+        <text y="63">.++   -      *#%@@%#* : :    - ++.</text>
+        <text y="72">++ : :     ::+*#%@@%#*+: :    ++.</text>
+        <text y="81">.=*   ---    +*#%@%**#%@%*+ -: -:- - *=.</text>
+        <text y="90">.#   --   :   *#%@%*: *#%@%*  :      #.</text>
+        <text y="99">.++ .  - .   *#%@%*+  +*#%@%* : :  -  ++.</text>
+        <text y="108">.*-. -  - . +*#%@%*+  :+*#%@%*+  - - *-.</text>
+        <text y="117">.-*   - .  .+#%@%*   *#%@%*+- :  -   *-</text>
+        <text y="126">.=*   :   : +*#%@%*   *#%@%*+ - - : : *=.</text>
+        <text y="135">. : -  - *#%@%*+-  +*#%@%*  - :  *=.</text>
+        <text y="144">:       *#%@%*+ :   +*#%@%*   - - *</text>
+        <text y="153">.*-      +*#%@@@@@@@@@@@@@%#*+-  -  -*.</text>
+        <text y="162">.++   :   +*#%@@@@@@@@@@@@@@@%#*+    ++.</text>
+        <text y="171">.# . : - -*#%@%################%@%*- :-  #.</text>
+        <text y="180">.=*      -*#%@%*+- . : : - +*#%@%*- . : *=.</text>
+        <text y="189">.++ - : -+*#%@%*+- - - - - +*#%@%*+   ++.</text>
+        <text y="198">.++   +*#%@%*-   :     : *#%@%*+ : ++.</text>
+        <text y="207">.=* : *#%@%*+    -   .  +*#%@%*  *=.</text>
+        <text y="216">.-*= +*#%@%*+-   :   -*#%@%*+</text>
+        <text y="225">**##*+  --- :   --  :+*##**-*=</text>
+        <text y="234">=   -  : - - - - .  - =*+</text>
+        <text y="243">.=+*+-   :  : - -   .-*+=.</text>
+        <text y="252">.=+*+-   :   .  .-*+=.</text>
+        <text y="261">-=*#*++===  +*#*=-</text>
       </g>
 
-      <rect x="-216" y="-130" width="432" height="2" fill="#22D3EE" opacity="0.2">
-        <animateTransform attributeName="transform" type="translate" values="0,-30;0,310;0,-30" dur="6s" repeatCount="indefinite"/>
+      <rect x="0" y="50" width="432" height="2" fill="#22D3EE" opacity="0.15">
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,290;0,0" dur="6s" repeatCount="indefinite"/>
       </rect>
     </g>
 
-    <!-- Bottom Command -->
+    <!-- Bottom Tagline & Command Prompt -->
     <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
-      <text x="216" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="1.5">AI · ROBOTICS · FULL-STACK</text>
-      <text x="216" y="428" text-anchor="middle" font-size="10.5" fill="#94A3B8">Shipping intelligent systems end-to-end</text>
-      <text x="20" y="460" font-size="11" fill="#10B981">~/profile $</text>
-      <text x="112" y="460" font-size="11" fill="#F8FAFC">./build --ship</text>
-      <rect x="212" y="451" width="8" height="12" fill="#22D3EE">
+      <text x="216" y="382" text-anchor="middle" font-size="10" fill="#7C3AED" letter-spacing="2.5">[ PROFILE / ENGINEERING ]</text>
+      <text x="216" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">Full-Stack · Applied ML · Builder</text>
+      <text x="20" y="452" font-size="11" fill="#10B981">~/anto $</text>
+      <text x="88" y="452" font-size="11" fill="#F8FAFC">build --ship</text>
+      <rect x="174" y="443" width="8" height="12" fill="#22D3EE">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
       </rect>
     </g>
