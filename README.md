@@ -1,78 +1,75 @@
-# Hey, I'm Anto
+<div align="center">
 
-### Building AI-powered applications and intelligent systems
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg">
+  <img src="./dark.svg" alt="Anto — AI Engineer · Robotics · Full-Stack Developer">
+</picture>
 
-Full-stack developer focused on machine learning, real-time systems, and practical AI solutions.
-
----
-
-## Featured Projects
-
-### Movie Recommendation System
-Netflix-style content-based recommendation engine with real-time similarity matching and rich movie metadata from TMDB API.
-
-`Python` `Streamlit` `Scikit-learn` `Cosine Similarity` `TMDB API`
-
-→ [View Project](https://github.com/Anto-211205/movie-recommender)
-
-### Aura — Mental Health Platform
-Production-ready full-stack mental health companion with WebSocket-based real-time chat, RAG-powered responses, and integrated NLP models.
-
-`FastAPI` `PostgreSQL` `Redis Pub/Sub` `WebSocket` `RAG` `Hugging Face` `Next.js`
-
-→ [View Project](https://github.com/Anto-211205/aura-patent)
-
-### RBM Hidden Representation Analysis
-Unsupervised machine learning research on travel booking behavior using Restricted Boltzmann Machines to discover latent customer preferences.
-
-`Python` `Jupyter` `Scikit-learn` `RBM` `Data Science` `PCA`
-
-→ [View Project](https://github.com/Anto-211205/RBM_Hidden_Representation)
-
-### AI Portfolio
-Modern portfolio website with smooth animations and responsive design showcasing AI/ML projects and technical work.
-
-`Next.js` `TypeScript` `React` `Tailwind CSS`
-
-→ [View Project](https://github.com/Anto-211205/ai-portfolio)
-
-### Supply Chain Dashboard
-Enterprise UI dashboard with interactive maps, data visualization, and responsive component library built with modern web technologies.
-
-`TypeScript` `Leaflet` `Recharts` `Radix UI` `Vite`
-
-→ [View Project](https://github.com/Anto-211205/supply_chain)
+</div>
 
 ---
 
-## Technologies & Tools
+## 👋 About
 
-### Languages
-Python · TypeScript · JavaScript · Go
+I build **intelligent systems** that bridge AI, robotics, and the web — from LLM-powered agents and RAG pipelines to autonomous robots and geospatial intelligence.
 
-### AI / Machine Learning
-PyTorch · Scikit-learn · Hugging Face · RAG · RBM · NLP · Cosine Similarity
-
-### Backend
-FastAPI · PostgreSQL · Redis · WebSocket · Docker
-
-### Frontend
-Next.js · React · TypeScript · Tailwind CSS · Radix UI · Streamlit
-
-### Data & Tools
-Jupyter Notebook · Pandas · NumPy · Git · Vercel
+I enjoy the full stack: training the model, serving it, wrapping it in a clean UI, and shipping it.
 
 ---
 
-## Currently Exploring
+## 🧠 Focus Areas
 
-- Real-time communication systems and distributed caching patterns
-- Advanced RAG implementations for domain-specific AI applications
-- Scaling machine learning pipelines with production-grade backends
+- **Generative AI** — LLMs, RAG, LangChain, agents, vector search
+- **Machine Learning** — Deep Learning, NLP, Computer Vision, RL
+- **Robotics** — ROS 2, SLAM, Path Planning, Jetson, Isaac Sim
+- **Geospatial AI** — OSMnx, GeoPandas, satellite imagery
+- **Full-Stack Engineering** — Next.js, FastAPI, 3D web experiences
 
 ---
 
-## Let's Connect
+## 🚀 Featured Projects
 
-**GitHub:** [@Anto-211205](https://github.com/Anto-211205)  
-**Portfolio:** [ai-portfolio-eight-beryl.vercel.app](https://ai-portfolio-eight-beryl.vercel.app)
+| Project | Description |
+|---|---|
+| [**trustmart-ai**](https://github.com/Anto-211205/trustmart-ai) | AI-powered trust & verification layer |
+| [**grievance**](https://github.com/Anto-211205/grievance) | Intelligent grievance routing system |
+| [**skillsync-ai**](https://github.com/Anto-211205/skillsync-ai) | AI skill matching & career intelligence |
+
+---
+
+## 🛠️ Engineering Stack
+
+**Languages** — Python · Java · JavaScript · TypeScript · SQL
+**AI / ML** — PyTorch · Scikit-learn · NLP · Computer Vision · Reinforcement Learning
+**GenAI** — LLMs · RAG · LangChain · Hugging Face · Ollama · FAISS · ChromaDB
+**Backend** — FastAPI · Flask · Node.js
+**Frontend** — React · Next.js · Tailwind CSS · Three.js · React Three Fiber
+**Data** — Pandas · NumPy · PostgreSQL · MongoDB · Firebase
+**Robotics** — ROS 2 · Gazebo · NVIDIA Jetson · Isaac Sim · Unity · SLAM
+**Algorithms** — A* · ORB-SLAM · NetworkX · Graph Algorithms
+**Geospatial** — GeoPandas · Shapely · OSMnx · Satellite Processing
+**DevOps** — Git · Docker · Linux · AWS · Vercel · Render
+
+---
+
+## 📊 GitHub Activity
+
+<div align="center">
+
+![Anto's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anto-211205&show_icons=true&theme=tokyonight&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Anto-211205&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+---
+
+## 🔗 Connect
+
+- 🐙 **GitHub** — [@Anto-211205](https://github.com/Anto-211205)
+
+---
+
+<div align="center">
+<sub>⚡ Built with intent · Shipping intelligent systems</sub>
+</div>
