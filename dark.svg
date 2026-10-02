@@ -13,10 +13,6 @@
       <stop offset="0" stop-color="#22D3EE" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="brainGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
-    </radialGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#7C3AED"/>
       <stop offset="0.5" stop-color="#22D3EE"/>
@@ -29,41 +25,36 @@
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.4"/>
     </pattern>
-    <pattern id="microGrid" width="8" height="8" patternUnits="userSpaceOnUse">
-      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#22D3EE" stroke-width="0.5" opacity="0.15"/>
+    <pattern id="dotMatrix" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="0.75" fill="#22D3EE" opacity="0.3"/>
     </pattern>
     <clipPath id="frameClip">
       <rect x="16" y="16" width="1148" height="578" rx="22"/>
     </clipPath>
     <filter id="softGlow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <!-- Human Side Profile Silhouette Definition -->
-    <path id="headSilhouette" d="
-      M -15,-110 
-      C 20,-115 50,-85 55,-50 
-      C 53,-43 46,-38 43,-35 
-      L 68,-12 
-      C 68,-9 60,-2 50,-2 
-      L 57,5 
-      L 47,12 
-      L 54,23 
-      C 54,35 40,45 28,48 
-      L 26,70 
-      C 26,100 50,130 85,155 
-      L -95,155 
-      C -60,125 -50,95 -50,70 
-      C -50,35 -75,-5 -65,-50 
-      C -55,-90 -35,-110 -15,-110 
-      Z" 
+
+    <!-- Exact Silhouette Clip Path for Matrix Fill -->
+    <path id="humanSilhouette" d="
+      M -65,-40 
+      C -70,-80 -45,-115 -15,-120 
+      C 15,-125 50,-112 65,-85 
+      C 72,-68 68,-50 62,-40 
+      C 66,-25 68,-5 58,12 
+      C 54,20 50,22 48,20 
+      C 48,45 32,65 0,72 
+      C -32,65 -48,45 -48,20 
+      C -50,22 -54,20 -58,12 
+      C -68,-5 -66,-25 -62,-40 Z
+      M -30,72 L -32,92 L -85,115 L -135,145 L 135,145 L 85,115 L 32,92 L 30,72 Z"
     />
-    <clipPath id="headClip">
-      <use href="#headSilhouette"/>
+    <clipPath id="portraitClip">
+      <use href="#humanSilhouette"/>
     </clipPath>
   </defs>
 
@@ -87,7 +78,7 @@
   <!-- Outer Border -->
   <rect x="16.5" y="16.5" width="1147" height="577" rx="21.5" fill="none" stroke="url(#accent)" stroke-opacity="0.55" stroke-width="1"/>
 
-  <!-- Top Header Navigation -->
+  <!-- Header Navigation -->
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="10.5" fill="#94A3B8">
     <text x="48" y="52" fill="#F8FAFC" font-weight="700">◆ anto.dev</text>
     <text x="760" y="52">Code</text>
@@ -113,86 +104,85 @@
     <text x="76" y="20" font-family="ui-monospace,monospace" font-size="10.5" fill="#94A3B8">anto@profile:~ — VISUAL.MAP</text>
     <text x="360" y="20" font-family="ui-monospace,monospace" font-size="9.5" fill="#22D3EE" letter-spacing="1">● SIGNAL</text>
 
-    <!-- HOLOGRAPHIC AI PROFILE -->
-    <g transform="translate(216, 210)">
+    <!-- EXACT VAIBHAV HUMAN PORTRAIT (DOT MATRIX STYLE) -->
+    <g transform="translate(216, 215)">
       
-      <!-- Radar HUD Background -->
-      <circle cx="0" cy="20" r="130" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.1"/>
-      <circle cx="0" cy="20" r="95" fill="none" stroke="#7C3AED" stroke-width="1" stroke-dasharray="4 12" opacity="0.4"/>
-      <circle cx="0" cy="20" r="145" fill="none" stroke="#22D3EE" stroke-width="1" stroke-dasharray="1 6" opacity="0.15">
-        <animateTransform attributeName="transform" type="rotate" values="0 0 20; 360 0 20" dur="20s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- Head Internals (Clipped to silhouette) -->
-      <g clip-path="url(#headClip)">
-        <!-- Base Dark Fill -->
-        <rect x="-120" y="-130" width="240" height="300" fill="#030712" opacity="0.9"/>
-        <!-- Tech Micro Grid -->
-        <rect x="-120" y="-130" width="240" height="300" fill="url(#microGrid)"/>
+      <!-- Particle Dot Matrix Interior Fill -->
+      <g clip-path="url(#portraitClip)">
+        <rect x="-150" y="-140" width="300" height="300" fill="url(#dotMatrix)"/>
         
-        <!-- Glowing Core (Brain) -->
-        <circle cx="-15" cy="-35" r="70" fill="url(#brainGlow)"/>
-        <circle cx="-15" cy="-35" r="25" fill="#22D3EE" opacity="0.15" filter="url(#softGlow)"/>
-
-        <!-- Neural Network Lines -->
-        <path d="M -15,-35 L 25,-75 L 45,-60 
-                 M -15,-35 L 30,-30 L 45,-30 
-                 M -15,-35 L 15,10 L 40,15 
-                 M -15,-35 L -25,20 L -20,60 
-                 M 15,10 L -5,45 L 20,70" 
-              fill="none" stroke="#22D3EE" stroke-width="1.2" opacity="0.5"/>
-        
-        <!-- Data Nodes -->
-        <circle cx="25" cy="-75" r="3" fill="#7C3AED"/>
-        <circle cx="45" cy="-60" r="2" fill="#22D3EE"/>
-        <circle cx="30" cy="-30" r="3" fill="#7C3AED"/>
-        <circle cx="45" cy="-30" r="1.5" fill="#10B981"/>
-        <circle cx="15" cy="10" r="3" fill="#22D3EE"/>
-        <circle cx="40" cy="15" r="2" fill="#7C3AED"/>
-        <circle cx="-25" cy="20" r="3" fill="#22D3EE"/>
-        <circle cx="-20" cy="60" r="2" fill="#7C3AED"/>
-        <circle cx="-5" cy="45" r="2.5" fill="#10B981"/>
-        <circle cx="20" cy="70" r="2" fill="#22D3EE"/>
-
-        <!-- Animated Vertical Scanline -->
-        <rect x="-120" y="-130" width="2" height="300" fill="#7C3AED" opacity="0.6">
-          <animateTransform attributeName="transform" type="translate" values="0,0; 240,0; 0,0" dur="5s" repeatCount="indefinite"/>
-        </rect>
-        
-        <!-- Animated Horizontal Scan Beam -->
-        <rect x="-120" y="-130" width="240" height="3" fill="#22D3EE" opacity="0.8">
-          <animateTransform attributeName="transform" type="translate" values="0,0; 0,300; 0,0" dur="4s" repeatCount="indefinite"/>
-        </rect>
+        <!-- Dense Horizontal Scanlines (Matching Reference Visual) -->
+        <g stroke="#38BDF8" stroke-width="0.8" opacity="0.4" stroke-dasharray="1 2">
+          <line x1="-140" y1="-100" x2="140" y2="-100"/>
+          <line x1="-140" y1="-80" x2="140" y2="-80"/>
+          <line x1="-140" y1="-60" x2="140" y2="-60"/>
+          <line x1="-140" y1="-40" x2="140" y2="-40"/>
+          <line x1="-140" y1="-20" x2="140" y2="-20"/>
+          <line x1="-140" y1="0" x2="140" y2="0"/>
+          <line x1="-140" y1="20" x2="140" y2="20"/>
+          <line x1="-140" y1="40" x2="140" y2="40"/>
+          <line x1="-140" y1="60" x2="140" y2="60"/>
+          <line x1="-140" y1="80" x2="140" y2="80"/>
+          <line x1="-140" y1="100" x2="140" y2="100"/>
+          <line x1="-140" y1="120" x2="140" y2="120"/>
+          <line x1="-140" y1="140" x2="140" y2="140"/>
+        </g>
       </g>
 
-      <!-- Head Silhouette Outline -->
-      <use href="#headSilhouette" fill="none" stroke="#22D3EE" stroke-width="1.8"/>
-      
-      <!-- Pulsing Outer Glow -->
-      <use href="#headSilhouette" fill="none" stroke="#7C3AED" stroke-width="4" filter="url(#softGlow)" opacity="0.3">
-        <animate attributeName="opacity" values="0.1;0.6;0.1" dur="3s" repeatCount="indefinite"/>
-      </use>
+      <!-- VECTOR OUTLINES (Exact Match to Reference Photo) -->
+      <g stroke="#22D3EE" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+        <!-- 1. STYLED HAIR -->
+        <path d="M -62,-42 C -68,-78 -45,-115 -15,-120 C 15,-125 50,-112 65,-85 C 72,-68 68,-50 62,-40" stroke-dasharray="2 2"/>
+        <path d="M -52,-55 C -40,-85 -10,-98 25,-92 C 45,-88 58,-75 60,-60"/>
+        <path d="M -40,-72 C -20,-95 15,-98 45,-82"/>
+        <path d="M -25,-88 C 0,-102 30,-98 40,-85"/>
+        <path d="M -52,-42 C -38,-58 0,-62 38,-54 C 48,-52 56,-45 58,-38"/>
 
-      <!-- Cybernetic Ear -->
-      <path d="M -45,-15 C -55,-15 -60,5 -50,20 C -45,25 -35,25 -35,15 C -35,0 -35,-15 -45,-15 Z" fill="#0B1220" stroke="#7C3AED" stroke-width="1.5"/>
-      <circle cx="-45" cy="2" r="3" fill="#22D3EE" filter="url(#softGlow)"/>
-      <circle cx="-38" cy="-5" r="1.5" fill="#10B981"/>
+        <!-- 2. EARS -->
+        <path d="M -52,-25 C -62,-20 -64,-5 -56,10 C -52,18 -48,20 -46,18"/>
+        <path d="M 52,-25 C 62,-20 64,-5 56,10 C 52,18 48,20 46,18"/>
 
-      <!-- Modern Tech Visor (Eye covering) -->
-      <path d="M 25,-45 L 65,-30 L 60,-10 L 22,-20 Z" fill="#030712" stroke="#22D3EE" stroke-width="1.5" opacity="0.95"/>
-      <line x1="28" y1="-38" x2="48" y2="-32" stroke="#10B981" stroke-width="1.5"/>
-      <line x1="26" y1="-32" x2="38" y2="-28" stroke="#10B981" stroke-width="1.5"/>
+        <!-- 3. RECTANGULAR GLASSES (Signature Feature) -->
+        <!-- Left Lens -->
+        <rect x="-46" y="-28" width="38" height="26" rx="5" stroke="#38BDF8" stroke-width="2.2" fill="#07111F" fill-opacity="0.75" filter="url(#softGlow)"/>
+        <!-- Right Lens -->
+        <rect x="8" y="-28" width="38" height="26" rx="5" stroke="#38BDF8" stroke-width="2.2" fill="#07111F" fill-opacity="0.75" filter="url(#softGlow)"/>
+        <!-- Bridge & Temples -->
+        <path d="M -8,-18 L 8,-18" stroke="#38BDF8" stroke-width="2.5"/>
+        <path d="M -46,-18 L -58,-22" stroke="#38BDF8" stroke-width="2"/>
+        <path d="M 46,-18 L 58,-22" stroke="#38BDF8" stroke-width="2"/>
 
-      <!-- External HUD Elements -->
-      <text x="70" y="-100" font-family="ui-monospace,monospace" font-size="7" fill="#22D3EE" letter-spacing="1">SYS.SCAN_</text>
-      <text x="70" y="-90" font-family="ui-monospace,monospace" font-size="7" fill="#94A3B8" letter-spacing="1">BIO: VALID</text>
-      
-      <text x="-120" y="80" font-family="ui-monospace,monospace" font-size="7" fill="#7C3AED" letter-spacing="1">NEURAL_NET</text>
-      <text x="-120" y="90" font-family="ui-monospace,monospace" font-size="7" fill="#94A3B8" letter-spacing="1">ACTIVE</text>
-      
-      <!-- Plus markers -->
-      <path d="M -110,-100 L -100,-100 M -105,-105 L -105,-95" stroke="#1E293B" stroke-width="1.5"/>
-      <path d="M 100,120 L 110,120 M 105,115 L 105,125" stroke="#1E293B" stroke-width="1.5"/>
+        <!-- 4. NOSE & MOUTH -->
+        <path d="M -1,-12 L -1,8 L 6,12" stroke="#22D3EE" stroke-width="1.5"/>
+        <path d="M -14,35 Q 0,42 14,35" stroke="#22D3EE" stroke-width="1.8"/>
+
+        <!-- 5. JAW & BEARD OUTLINE -->
+        <path d="M -48,15 C -48,42 -32,64 0,72 C 32,64 48,42 48,15"/>
+        <path d="M -40,20 C -36,46 -24,56 0,62 C 24,56 36,46 40,20" stroke-dasharray="1 3"/>
+
+        <!-- 6. NECK & CREW-NECK T-SHIRT -->
+        <path d="M -28,70 L -30,92"/>
+        <path d="M 28,70 L 30,92"/>
+        <!-- Crew Neck Collar -->
+        <path d="M -30,92 C -15,112 15,115 30,92" stroke-width="2.2"/>
+        <path d="M -25,98 C -12,116 12,118 25,98" stroke-dasharray="2 2"/>
+
+        <!-- 7. OPEN JACKET LAPELS & SHOULDERS -->
+        <!-- Left Jacket Side -->
+        <path d="M -58,90 L -30,122 L -25,150"/>
+        <path d="M -85,115 L -65,150"/>
+        <path d="M -30,92 L -85,115 L -140,145"/>
+        <!-- Right Jacket Side -->
+        <path d="M 58,90 L 30,122 L 25,150"/>
+        <path d="M 85,115 L 65,150"/>
+        <path d="M 30,92 L 85,115 L 140,145"/>
+      </g>
+
+      <!-- Animated Scan Line (Purple/Cyan Beam passing over face) -->
+      <line x1="-140" y1="-120" x2="140" y2="-120" stroke="#7C3AED" stroke-width="2" opacity="0.85" filter="url(#softGlow)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,260; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      </line>
     </g>
 
     <!-- Bottom Tagline & Command Prompt -->
