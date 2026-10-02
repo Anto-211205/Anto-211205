@@ -40,25 +40,17 @@
 
     <!-- Floating Particles -->
     <g fill="#22D3EE" opacity="0.5">
-      <circle cx="200" cy="120" r="1.2">
-        <animate attributeName="cy" values="120;540;120" dur="22s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="500" cy="300" r="1">
-        <animate attributeName="cy" values="300;80;300" dur="26s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="900" cy="200" r="1.4">
-        <animate attributeName="cy" values="200;500;200" dur="30s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1080" cy="400" r="1">
-        <animate attributeName="cy" values="400;120;400" dur="24s" repeatCount="indefinite"/>
-      </circle>
+      <circle cx="200" cy="120" r="1.2"><animate attributeName="cy" values="120;540;120" dur="22s" repeatCount="indefinite"/></circle>
+      <circle cx="500" cy="300" r="1"><animate attributeName="cy" values="300;80;300" dur="26s" repeatCount="indefinite"/></circle>
+      <circle cx="900" cy="200" r="1.4"><animate attributeName="cy" values="200;500;200" dur="30s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="400" r="1"><animate attributeName="cy" values="400;120;400" dur="24s" repeatCount="indefinite"/></circle>
     </g>
   </g>
 
   <!-- Outer Border -->
   <rect x="16.5" y="16.5" width="1147" height="577" rx="21.5" fill="none" stroke="url(#accent)" stroke-opacity="0.55" stroke-width="1"/>
 
-  <!-- Header Navigation -->
+  <!-- Top Header Navigation -->
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="10.5" fill="#94A3B8">
     <text x="48" y="52" fill="#F8FAFC" font-weight="700">◆ anto.dev</text>
     <text x="760" y="52">Code</text>
@@ -84,50 +76,70 @@
     <text x="76" y="20" font-family="ui-monospace,monospace" font-size="10.5" fill="#94A3B8">anto@profile:~ — VISUAL.MAP</text>
     <text x="360" y="20" font-family="ui-monospace,monospace" font-size="9.5" fill="#22D3EE" letter-spacing="1">● SIGNAL</text>
 
-    <!-- Geometric Sphere ASCII (Reference Image) -->
-    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#38BDF8" text-anchor="middle" xml:space="preserve">
-      <g transform="translate(216,80)">
-        <text y="0">-=*#*+   ==++*#*=-</text>
-        <text y="9">.=+*+- . : : . -+*+=.</text>
-        <text y="18">.=+*- .    :    . -*+=.</text>
-        <text y="27">.+*=  :     +*##*+   :  =*+.</text>
-        <text y="36">=*-.   :.-  +*#%%#*+  - .  .-*=</text>
-        <text y="45">:   : --   +*#%@@%#*+      =*:</text>
-        <text y="54">.=*   - -:   *#%@@%#*  :  -  :  *=.</text>
-        <text y="63">.++   -      *#%@@%#* : :    - ++.</text>
-        <text y="72">++ : :     ::+*#%@@%#*+: :    ++.</text>
-        <text y="81">.=*   ---    +*#%@%**#%@%*+ -: -:- - *=.</text>
-        <text y="90">.#   --   :   *#%@%*: *#%@%*  :      #.</text>
-        <text y="99">.++ .  - .   *#%@%*+  +*#%@%* : :  -  ++.</text>
-        <text y="108">.*-. -  - . +*#%@%*+  :+*#%@%*+  - - *-.</text>
-        <text y="117">.-*   - .  .+#%@%*   *#%@%*+- :  -   *-</text>
-        <text y="126">.=*   :   : +*#%@%*   *#%@%*+ - - : : *=.</text>
-        <text y="135">. : -  - *#%@%*+-  +*#%@%*  - :  *=.</text>
-        <text y="144">:       *#%@%*+ :   +*#%@%*   - - *</text>
-        <text y="153">.*-      +*#%@@@@@@@@@@@@@%#*+-  -  -*.</text>
-        <text y="162">.++   :   +*#%@@@@@@@@@@@@@@@%#*+    ++.</text>
-        <text y="171">.# . : - -*#%@%################%@%*- :-  #.</text>
-        <text y="180">.=*      -*#%@%*+- . : : - +*#%@%*- . : *=.</text>
-        <text y="189">.++ - : -+*#%@%*+- - - - - +*#%@%*+   ++.</text>
-        <text y="198">.++   +*#%@%*-   :     : *#%@%*+ : ++.</text>
-        <text y="207">.=* : *#%@%*+    -   .  +*#%@%*  *=.</text>
-        <text y="216">.-*= +*#%@%*+-   :   -*#%@%*+</text>
-        <text y="225">**##*+  --- :   --  :+*##**-*=</text>
-        <text y="234">=   -  : - - - - .  - =*+</text>
-        <text y="243">.=+*+-   :  : - -   .-*+=.</text>
-        <text y="252">.=+*+-   :   .  .-*+=.</text>
-        <text y="261">-=*#*++===  +*#*=-</text>
-      </g>
+    <!-- EXACT HUMAN PORTRAIT (Vector Line / Dot Matrix Artwork) -->
+    <g transform="translate(216, 200)" stroke="#38BDF8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- Hair Contour -->
+      <path d="M -65,-72 C -65,-105 -25,-120 0,-120 C 35,-120 65,-100 68,-70 C 72,-40 68,-20 65,-10" stroke-dasharray="2 3"/>
+      <path d="M -65,-72 C -50,-85 -20,-95 10,-95 C 40,-95 60,-82 68,-70"/>
+      <path d="M -55,-85 C -30,-108 15,-110 50,-90"/>
+      <path d="M -40,-98 C -10,-115 30,-112 58,-80"/>
 
-      <rect x="0" y="50" width="432" height="2" fill="#22D3EE" opacity="0.15">
-        <animateTransform attributeName="transform" type="translate" values="0,0;0,290;0,0" dur="6s" repeatCount="indefinite"/>
-      </rect>
+      <!-- Ears -->
+      <path d="M -60,-22 C -68,-20 -70,-5 -62,8 C -58,15 -54,18 -52,18"/>
+      <path d="M 60,-22 C 68,-20 70,-5 62,8 C 58,15 54,18 52,18"/>
+
+      <!-- Face Outline & Jaw -->
+      <path d="M -54,-18 C -55,10 -50,42 -32,62 C -18,74 18,74 32,62 C 50,42 55,10 54,-18"/>
+      <path d="M -30,62 C -15,70 15,70 30,62" stroke-dasharray="1 2"/>
+
+      <!-- Glasses Frame -->
+      <!-- Left Glass -->
+      <rect x="-46" y="-30" width="36" height="26" rx="5" stroke="#22D3EE" stroke-width="2.2" fill="#07111F" fill-opacity="0.6"/>
+      <!-- Right Glass -->
+      <rect x="10" y="-30" width="36" height="26" rx="5" stroke="#22D3EE" stroke-width="2.2" fill="#07111F" fill-opacity="0.6"/>
+      <!-- Bridge & Temples -->
+      <path d="M -10,-18 L 10,-18" stroke="#22D3EE" stroke-width="2.5"/>
+      <path d="M -46,-18 L -60,-22" stroke="#22D3EE" stroke-width="2"/>
+      <path d="M 46,-18 L 60,-22" stroke="#22D3EE" stroke-width="2"/>
+
+      <!-- Nose & Mouth Lines -->
+      <path d="M 0,-15 L 0,8 L 6,12" stroke="#38BDF8" stroke-width="1.5"/>
+      <path d="M -14,32 Q 0,38 14,32" stroke="#38BDF8" stroke-width="1.6"/>
+      <path d="M -8,44 Q 0,48 8,44" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="2 2"/>
+
+      <!-- Beard / Stubble Lines -->
+      <path d="M -48,20 C -45,48 -28,60 0,64 C 28,60 45,48 48,20" stroke="#38BDF8" stroke-width="1" stroke-dasharray="1 3"/>
+
+      <!-- Neck & Collar / T-Shirt -->
+      <path d="M -30,70 L -32,95 L -80,125 L -120,150"/>
+      <path d="M 30,70 L 32,95 L 80,125 L 120,150"/>
+      <!-- Crew Neck Shirt -->
+      <path d="M -32,95 C -15,115 15,115 32,95" stroke-width="2"/>
+      <!-- Jacket Lapels -->
+      <path d="M -60,110 L -30,140 L -25,160"/>
+      <path d="M 60,110 L 30,140 L 25,160"/>
+      <path d="M -80,125 L -65,160"/>
+      <path d="M 80,125 L 65,160"/>
+
+      <!-- Horizontal Cyber Scanline Effect overlay on portrait -->
+      <line x1="-120" y1="-80" x2="120" y2="-80" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
+      <line x1="-120" y1="-40" x2="120" y2="-40" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
+      <line x1="-120" y1="0" x2="120" y2="0" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
+      <line x1="-120" y1="40" x2="120" y2="40" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
+      <line x1="-120" y1="80" x2="120" y2="80" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
+      <line x1="-120" y1="120" x2="120" y2="120" stroke="#22D3EE" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 4"/>
     </g>
+
+    <!-- Animated Scan Beam across portrait -->
+    <rect x="20" y="80" width="392" height="2" fill="#22D3EE" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,280; 0,0" dur="5s" repeatCount="indefinite"/>
+    </rect>
 
     <!-- Bottom Tagline & Command Prompt -->
     <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
       <text x="216" y="382" text-anchor="middle" font-size="10" fill="#7C3AED" letter-spacing="2.5">[ PROFILE / ENGINEERING ]</text>
-      <text x="216" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">Full-Stack · Applied ML · Builder</text>
+      <text x="216" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">AI Engineer · Full-Stack · Builder</text>
       <text x="20" y="452" font-size="11" fill="#10B981">~/anto $</text>
       <text x="88" y="452" font-size="11" fill="#F8FAFC">build --ship</text>
       <rect x="174" y="443" width="8" height="12" fill="#22D3EE">
